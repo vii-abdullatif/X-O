@@ -43,22 +43,26 @@ grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_jyhfs")
 
 [node name="PlayerLabel" type="Label" parent="." unique_id=860796546]
-offset_left = 600.0
-offset_top = 120.0
-offset_right = 900.0
-offset_bottom = 187.0
+anchors_preset = -1
+anchor_left = 0.6666667
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 0.31166667
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 46
 text = "Next Player: "
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="PlayerPanel" type="Panel" parent="." unique_id=2023595961]
-offset_left = 650.0
-offset_top = 200.0
-offset_right = 850.0
-offset_bottom = 400.0
+anchors_preset = -1
+anchor_left = 0.7222222
+anchor_top = 0.33333334
+anchor_right = 0.9444444
+anchor_bottom = 0.6666667
 theme_override_styles/panel = SubResource("StyleBoxFlat_tbgi4")
+metadata/_edit_use_anchors_ = true
 
 [node name="GameOverMenu" parent="." unique_id=1758281290 instance=ExtResource("5_tbgi4")]
 process_mode = 2

@@ -16,10 +16,19 @@ body {
 	background-color: black;
 	overflow: hidden;
 	touch-action: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
 }
 
 #canvas {
 	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	aspect-ratio: 16 / 9; /* Change this to your project's aspect ratio (e.g., 4/3 or 1/1 if square) */
+	object-fit: contain;
 }
 
 #canvas:focus {
@@ -93,7 +102,6 @@ body {
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 		<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
-		<!-- Godot 4 SharedArrayBuffer Isolation Workaround Header -->
 		<script src="coi-serviceworker.js"></script>
 
 	</head>
@@ -114,7 +122,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":150708,"index.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":150836,"index.wasm":37695054},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
