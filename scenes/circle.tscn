@@ -2,5 +2,5 @@
 
 [ext_resource type="Texture2D" uid="uid://c1awn0mklraie" path="res://assets/.Opng.png" id="1_wcjn7"]
 
-[node name="Circle" type="Sprite2D" unique_id=817837770]
+[node name="Circle" type="Sprite2D" unique_id=817837770 groups=["circles"]]
 texture = ExtResource("1_wcjn7")

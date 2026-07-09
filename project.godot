@@ -30,6 +30,11 @@ folder_colors={
 "res://scenes/": "blue"
 }
 
+[global_group]
+
+circles=""
+crosses=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
