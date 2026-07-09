@@ -1,108 +1,304 @@
 <a id="readme-top"></a>
 
+
+
 <!-- SHIELDS -->
+
 [![Contributors][contributors-shield]][contributors-url]
+
 [![Forks][forks-shield]][forks-url]
+
 [![Stargazers][stars-shield]][stars-url]
+
 [![Issues][issues-shield]][issues-url]
 
+[![MIT License][license-shield]][license-url]
+
+
+
 <!-- HEADER -->
+
 <br />
+
 <div align="center">
-    <h3 align="center">❌ Tic-Tac-Toe (X-O) ⭕</h3>
+
+    <a href="https://github.com/BudzioT/Godot_Super-Wakatime">
+
+        <img src="https://cloud-bo1ln2br1-hack-club-bot.vercel.app/0godotwaka22.png"  alt="Godot Wakatime"/>
+
+    </a>
+
+    <h3 align="center"> Godot Super Wakatime </h3>
+
     <p align="center">
-        A clean, interactive 2D Tic-Tac-Toe game built from scratch using Godot Engine 4.
+
+        Tool to measure time spent in loved by many people game engine - Godot
+
         <br />
+
+        Officially approved to use in events created by Hack Club
+
         <br />
-        <a href="https://vii-abdullatif.github.io/X-O/"><strong>Play Live in Browser »</strong></a>
+
         <br />
-        <br />
-        <a href="https://github.com/vii-abdullatif/X-O/issues/new">Report Bug</a>
+
+        <a href="https://godotengine.org/asset-library/asset/3484">Get from Asset Lib</a>
+
         ·
-        <a href="https://github.com/vii-abdullatif/X-O/issues/new">Request Feature</a>
+
+        <a href="https://youtu.be/rqAc-YdVXyM">View Demo</a>
+
+        ·
+
+        <a href="https://github.com/BudzioT/Godot_Super-Wakatime/issues/new">Report Bug / Request Feature</a>
+
     </p>
+
 </div>
 
+
+
 <!-- CONTENTS -->
+
 <details>
+
     <summary>Table of Contents</summary>
+
     <ol>
+
         <li>
-            <a href="#about-the-project">About The Project</a>
+
+            <a href="#about">About The Project</a>
+
             <ul>
-                <li><a href="#built-using">Built Using</a></li>
+
+                <li><a href="#built-with">Built Using</a></li>
+
             </ul>
+
         </li>
+
         <li>
+
             <a href="#getting-started">Getting Started</a>
+
             <ul>
-                <li><a href="#local-setup">Local Setup</a></li>
+
+                <li><a href="#installation">Installation</a></li>
+
             </ul>
+
         </li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#architecture-notes">Architecture Notes</a></li>
+
+        <li><a href="#usage">Usage</a></li>
+
+        <li><a href="#license">License</a></li>
+
     </ol>
+
 </details>
 
+
+
+
+
 <!-- ABOUT -->
+
 ## About The Project
 
-This is a responsive, lightweight 2D Tic-Tac-Toe game built to be played seamlessly on desktop or mobile browsers. It manages turn transitions, matches win conditions programmatically, and provides an instant replay loop.
+<br />
+
+
+
+[![Product Screenshot][product-screenshot]](https://waka.hackclub.com)
+
+
+
+This tool can successfully measure time spent building your games or apps in Godot.
+
+<br />
+
+Here's why:
+
+* It differentiates between switching a scene and script
+
+* It counts key presses as coding and mouse clicks as building scene
+
+* Changing scene structure results in a heartbeat sent
+
+* It correctly detects OS, machine name, language, editor, files
+
+* It can detect your cursor line and position
+
+* Time is split between: Building, Coding, Testing
+
+* In the future it will also detect testing your projects
+
+
+
+It works on both Linux and Windows, it wasn't tested on macOS yet
+
+<br />
+
+You can also see your time spent in the editor itself:
+
+[![Time in editor][time-screenshot]]
+
+
+
+<p align="right">(<a href="#readme-top">top</a>)</p>
+
+
+
+
 
 ### Built Using
-* [![Godot Engine][Godot-shield]][Godot-url]
-* [![GDScript][GDScript-shield]][Godot-url]
-* [![GitHub Pages][GitHub-shield]][GitHub-url]
+
+I used the Ouch! CLI tool for decompression of files <br />
+
+This project was built using one simple, yet powerful language.<br />
+
+It required a lot of workarounds, but it was a pleasure to use it
+
+* [![GDScript][Godot]][Godot-url]
+
+* [![Ouch!][Ouch-shield]][Ouch-url]
+
+
 
 <p align="right">(<a href="#readme-top">top</a>)</p>
 
-<!-- FEATURES -->
-## Features
 
-* **Interactive 2D Grid:** Fluid mouse/touch click detection for placing X and O marks.
-* **Smart Turn Management:** Automatically alternates tracking between players.
-* **Win/Tie Logic:** Instantly checks horizontal, vertical, and diagonal lines for win states or game-ending stalemates.
-* **Smooth UI Anchoring:** Designed with dynamic scaling wrappers to maintain display symmetry on varying browser window resolutions.
-* **Instant Reset:** Clean "Play Again" cycle that purges match arrays without engine reloads.
-
-<p align="right">(<a href="#readme-top">top</a>)</p>
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
-### Local Setup
-To pull down the project files and explore the source code inside your own Godot Editor:
+How to install and use this software? It's easy!
 
-1. Clone the repository:
+
+
+### Installation
+
+You can either download it from the [Godot Asset Library](https://godotengine.org/asset-library/asset/3484).
+
+<br />Or you can manually install it, here's how to do it!
+
+1. Clone the repository
+
     ```sh
-    git clone [https://github.com/vii-abdullatif/X-O.git](https://github.com/vii-abdullatif/X-O.git)
+
+    git clone https://github.com/BudzioT/Godot_Super-Wakatime.git
+
     ```
-2. Open the **Godot Project Manager**.
-3. Click **Import**, navigate to the cloned folder directory, select the `project.godot` file, and open.
+
+2. Go into your project
+
+3. Insert the entire `./addons` folder into your project `res://` directory
+
+
 
 <p align="right">(<a href="#readme-top">top</a>)</p>
 
-<!-- ARCHITECTURE -->
-## Architecture Notes
 
-* **`res://scenes/`**: Contains the node structures (`.tscn`) handling structural presentation.
-* **`docs/`**: The customized distribution builds containing compiled assemblies (`.pck`, `.wasm`, `.js`) used to serve the site over GitHub Pages via an isolated cross-origin context wrapper.
+
+<!-- USAGE -->
+
+## Usage
+
+Don't know how to use this plugin? Here are the steps:
+
+1. Turn on the plugin in your plugins. In your `Project -> Project Settings -> Plugins -> `Click the `Enable` checkbox near this plugin
+
+2. If prompted for API key, provide it from Wakatime website
+
+3. if there is an issue with it, please manually create `~/.wakatime.cfg` file with these contents:
+
+    ```sh
+
+    [settings]
+
+    api_key=xxxx
+
+    ```
+
+    Where xxxx is your api key
+
+<br /><br />
+
+If you are coming from Hack Club use this:
+
+    ```sh
+
+    [settings]
+
+    api_url = https://hackatime.hackclub.com/api/hackatime/v1
+
+    api_key=xxxx
+
+    ```
+
+4. Wakatime CLI should have been installed automatically along with Ouch! Decompression library
+
+5. Work on your project! You should see your results on either Wakatime or Hackatime!
+
+6. You can also see your time at the bottom panel
+
+
 
 <p align="right">(<a href="#readme-top">top</a>)</p>
 
-<!-- REPO LINK STRINGS -->
-[contributors-shield]: https://img.shields.io/github/contributors/vii-abdullatif/X-O?style=for-the-badge
-[contributors-url]: https://github.com/vii-abdullatif/X-O/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/vii-abdullatif/X-O?style=for-the-badge
-[forks-url]: https://github.com/vii-abdullatif/X-O/forks
-[stars-shield]: https://img.shields.io/github/stars/vii-abdullatif/X-O?style=for-the-badge
-[stars-url]: https://github.com/vii-abdullatif/X-O/stargazers
-[issues-shield]: https://img.shields.io/github/issues/vii-abdullatif/X-O?style=for-the-badge
-[issues-url]: https://github.com/vii-abdullatif/X-O/issues
 
-<!-- TECH BADGE STRINGS -->
-[Godot-shield]: https://img.shields.io/badge/Godot%20Engine-478CBF?logo=godotengine&logoColor=fff&style=flat
+
+<!-- LICENSE -->
+
+## License
+
+
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+<!-- URLS -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/budziot/Godot_Super-Wakatime?style=for-the-badge
+
+[contributors-url]: https://github.com/BudzioT/Godot_Super-Wakatime/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/budziot/Godot_Super-Wakatime?style=for-the-badge
+
+[forks-url]: https://github.com/BudzioT/Godot_Super-Wakatime/forks
+
+[stars-shield]: https://img.shields.io/github/stars/budziot/Godot_Super-Wakatime?style=for-the-badge
+
+[stars-url]: https://github.com/BudzioT/Godot_Super-Wakatime/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/budziot/Godot_Super-Wakatime?style=for-the-badge
+
+[issues-url]: https://github.com/BudzioT/Godot_Super-Wakatime/issues
+
+[license-shield]: https://img.shields.io/github/license/budziot/Godot_Super-Wakatime?style=for-the-badge
+
+[license-url]: https://github.com/BudzioT/Godot_Super-Wakatime/blob/master/addons/godot_super-wakatime/LICENSE
+
+[product-screenshot]: https://cloud-j4wibbzz7-hack-club-bot.vercel.app/0image.png
+
+[product-logo]: https://cloud-j4wibbzz7-hack-club-bot.vercel.app/2godotwaka2.png
+
+[Godot]: https://img.shields.io/badge/Godot%20Engine-478CBF?logo=godotengine&logoColor=fff&style=flat
+
 [Godot-url]: https://godotengine.org/
-[GDScript-shield]: https://img.shields.io/badge/GDScript-EC9123?style=flat
-[GitHub-shield]: https://img.shields.io/badge/GitHub%20Pages-222222?logo=github&logoColor=fff&style=flat
-[GitHub-url]: https://pages.github.com/
+
+[Ouch-shield]: https://img.shields.io/badge/Ouch!-tool-blue?label=Ouch!
+
+[Ouch-url]: https://github.com/ouch-org/ouch
+
+[time-screenshot]: https://cloud-l88kldf50-hack-club-bot.vercel.app/0image.png 
+
