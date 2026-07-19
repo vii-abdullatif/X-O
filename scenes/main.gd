@@ -17,14 +17,25 @@ var col_sum: int
 var diagonal1_sum: int
 var diagonal2_sum: int
 
-
+signal o_won
+signal x_won
+	
 func _ready() -> void:
 	board_size = $Board.texture.get_width()
 	cell_size = board_size / 3
 	player_panel_pos = $PlayerPanel.get_position()
+	
+	# Menu configuration to fix pause freezing and ordering
+	$GameOverMenu.process_mode = Node.PROCESS_MODE_ALWAYS
+	$GameOverMenu.layer = 10
+	
+	# 2. Force the restart button to connect to the script
+	if not $GameOverMenu.get_node("RestartButton").pressed.is_connected(_on_game_over_menu_restart):
+		$GameOverMenu.get_node("RestartButton").pressed.connect(_on_game_over_menu_restart)
+	
 	new_game()
-
-
+	
+		
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -34,22 +45,27 @@ func _input(event):
 					moves += 1
 					grid_data[grid_pos.y][grid_pos.x] = player
 					create_marker(player, grid_pos * cell_size + Vector2i(cell_size / 1.75, cell_size / 1.8))
+					
 					if check_win() != 0:
 						get_tree().paused = true
-						$GameOverMenu.show()
+						$GameOverMenu.visible = true # 3. Safely show CanvasLayer
 						if winner == 1:
 							$GameOverMenu.get_node("ResultLabel").text = "Player 1 Wins!!!"
+							o_won.emit() # 4. Sends the signal to update ScoreUI
 						elif winner == -1:
 							$GameOverMenu.get_node("ResultLabel").text = "Player 2 Wins!!!"
+							x_won.emit() # 4. Sends the signal to update ScoreUI
+							
 					elif moves == 9:
 						get_tree().paused = true
-						$GameOverMenu.show()
+						$GameOverMenu.visible = true # 3. Safely show CanvasLayer
 						$GameOverMenu.get_node("ResultLabel").text = "It's a Tie :("
+						
 					player *= -1
 					temp_marker.queue_free()
 					create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
-
-
+					
+					
 func new_game():
 	player = 1
 	moves = 0
@@ -66,12 +82,13 @@ func new_game():
 	get_tree().call_group("circles", "queue_free")
 	get_tree().call_group("crosses", "queue_free")
 	create_marker(player, player_panel_pos + Vector2i(cell_size / 2, cell_size / 2), true)
-	$GameOverMenu.hide()
+	
+	$GameOverMenu.visible = false # 3. Safely hide CanvasLayer
 	get_tree().paused = false
-
-
-func create_marker(player, position, temp=false):
-	if player == 1:
+	
+	
+func create_marker(p_type, position, temp=false):
+	if p_type == 1:
 		var circle = circle_scene.instantiate()
 		circle.position = position
 		circle.add_to_group("circles")
@@ -83,8 +100,8 @@ func create_marker(player, position, temp=false):
 		cross.add_to_group("crosses")
 		add_child(cross)
 		if temp: temp_marker = cross
-
-
+	
+	
 func check_win():
 	for i in len(grid_data):
 		row_sum = grid_data[i][0] + grid_data[i][1] + grid_data[i][2]
@@ -98,7 +115,6 @@ func check_win():
 			winner = -1
 			return winner
 	return 0
-
-
+	
 func _on_game_over_menu_restart():
 	new_game()
