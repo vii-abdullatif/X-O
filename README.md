@@ -23,3 +23,6 @@ instantly without slowing down or lagging.
 
 ## Credits:
 Followed this tutorial to build the core of the game: (https://youtu.be/w6leMEr1aGo?si=faEg5W3HHJRMc_Fl)
+
+## AI usage:
+AI was used in debugging the wins counter.
